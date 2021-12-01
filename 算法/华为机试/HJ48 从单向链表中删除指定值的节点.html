@@ -3,7 +3,7 @@
  * @Author: changjia
  * @Date: 2021-11-27 21:29:35
  * @LastEditors: changjia
- * @LastEditTime: 2021-11-30 16:57:00
+ * @LastEditTime: 2021-12-01 15:59:54
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -17,9 +17,18 @@
 
 <body>
   <script type="text/javascript">
-    let matrix = []
-    matrix[3] = new Array()
-    console.log(matrix);
+    let str = '5 2 3 2 4 3 5 2 1 4 3'
+    let arr = str.split(' ')
+    let n = parseInt(arr[0])
+    let res = [arr[1]]
+    let k = arr[arr.length - 1]
+    for (let i = 0; i < n - 1; i++) {
+      let a = arr[2 + i * 2]
+      let b = arr[3 + i * 2]
+      res.splice(res.indexOf(b) + 1, 0, a)
+    }
+    res.splice(res.indexOf(k), 1)
+    console.log(res.join(' '));
   </script>
 </body>
 
