@@ -1,0 +1,43 @@
+<!--
+ * @description: 
+ * @Author: changjia
+ * @Date: 2021-12-02 16:27:34
+ * @LastEditors: changjia
+ * @LastEditTime: 2021-12-02 16:40:31
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>HJ60 查找组成一个偶数最接近的两个素数</title>
+</head>
+
+<body>
+  <script type="text/javascript">
+    let num = 20
+    for (let i = num / 2; i < num; i++) {
+      let j = num - i
+      if (isPrime(i) && isPrime(j)) {
+        console.log(j + '\n' + i);
+        break // 只输出一条
+      }
+    }
+
+    // 判断数字是否是素数
+    function isPrime(n) {
+      if (n > 2) { // 大于2的素数
+        for (let i = 2; i < Math.ceil(n / 2); i++) {
+          if (n % i === 0) {
+            return false
+          }
+        }
+        return true
+      } else {
+        return false
+      }
+    }
+  </script>
+</body>
+
+</html>
