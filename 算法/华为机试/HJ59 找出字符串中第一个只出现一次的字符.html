@@ -1,0 +1,33 @@
+<!--
+ * @description: 
+ * @Author: changjia
+ * @Date: 2021-12-02 14:46:27
+ * @LastEditors: changjia
+ * @LastEditTime: 2021-12-02 15:24:29
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>HJ59 找出字符串中第一个只出现一次的字符</title>
+</head>
+
+<body>
+  <script type="text/javascript">
+    let str = 'lpfg'
+    let char = ''
+    let c = 0
+    for (let i of str) {
+      let a = new RegExp(i, 'g')
+      if (str.match(a).length === 1) {
+        char = i
+        c++;
+        break // 如果有第二个单字母结束
+      }
+    }
+    console.log(char === '' ? -1 : char);
+  </script>
+</body>
+
+</html>
