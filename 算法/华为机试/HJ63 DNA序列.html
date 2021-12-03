@@ -1,0 +1,42 @@
+<!--
+ * @description: 
+ * @Author: changjia
+ * @Date: 2021-12-03 21:00:12
+ * @LastEditors: changjia
+ * @LastEditTime: 2021-12-03 21:15:55
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>HJ63 DNA序列</title>
+</head>
+<script type="text/javascript">
+  let str = 'AACTGTGCACGACCTGA'
+  let n = 5
+  let res = ''
+  let max = 0
+  for (let i = 0; i < str.length - n; i++) {
+    // 截取长度为n的字符串
+    let temp = str.substr(i, n)
+    let count = 0
+      // 遍历字符串中 CG 个数
+    for (let i in temp) {
+      if (temp[i] === 'C' || temp[i] === 'G') {
+        count++
+      }
+    }
+    if (count > max) {
+      max = count
+      res = temp
+    }
+  }
+  console.log(res);
+</script>
+
+<body>
+
+</body>
+
+</html>
