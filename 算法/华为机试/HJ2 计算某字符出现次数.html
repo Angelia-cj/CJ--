@@ -1,0 +1,31 @@
+<!--
+ * @description: 
+ * @Author: changjia
+ * @Date: 2021-12-08 13:58:25
+ * @LastEditors: changjia
+ * @LastEditTime: 2021-12-08 14:16:01
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>HJ2 计算某字符出现次数</title>
+</head>
+
+<body>
+  <script type="text/javascript">
+    let str = 'ABCabc'
+    let s = 'A'
+    let count = 0
+    str.split('').forEach(i => {
+      console.log(i);
+      if (s === i) {
+        count++
+      }
+    })
+    console.log(count);
+  </script>
+</body>
+
+</html>
