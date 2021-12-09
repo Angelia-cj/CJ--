@@ -3,7 +3,7 @@
  * @Author: changjia
  * @Date: 2021-12-09 16:11:34
  * @LastEditors: changjia
- * @LastEditTime: 2021-12-09 16:19:10
+ * @LastEditTime: 2021-12-09 16:23:02
  */
 function _date(number) {
   // 补全代码
@@ -14,8 +14,8 @@ function _date(number) {
   // return new Date(number).toISOString().slice(0, 10).replace('-0', '-').replace('-0', '-')
 
   // 方法三：
-  let data = new Date(number)
-  return `${data.getFullYear()}-${data.getMonth()+1}-${data.getDate()}`
+  let date = new Date(number)
+  return `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`
 }
 
 let number = 1631159776311
