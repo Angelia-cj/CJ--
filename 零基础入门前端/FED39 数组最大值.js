@@ -6,7 +6,7 @@
  * @LastEditTime: 2021-12-10 11:32:18
  */
 let arr = [1, 4, 2, 6, 4, 37]
-console.log(...arr);
+console.log(...arr); // 1 4 2 6 4 37
 
 let max = Math.max(...arr)
 console.log(max);
